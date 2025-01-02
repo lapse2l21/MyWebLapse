@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapse2L - Official Website</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Alegreya', serif;
+      color: #333;
+      line-height: 1.6;
+      background: linear-gradient(to bottom, #e0f7fa, #fff);
+    }
+
+    header {
+      background: linear-gradient(to right, #4CAF50, #2196F3);
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(to bottom, #f3e5f5, #fff);
+      padding: 50px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .feature {
+      background: linear-gradient(to bottom, #fff, #e3f2fd);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .feature p {
+      color: #666;
+    }
+
+    .quote-section {
+      background: #f0f4c3;
+      padding: 30px 20px;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .quote-section p {
+      font-size: 20px;
+      color: #444;
+    }
+
+    .quote-section span {
+      display: block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #888;
+    }
+
+    footer {
+      background: linear-gradient(to right, #333, #555);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    footer a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .bot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      background: #4CAF50;
+      border-radius: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .bot-container img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .chat-box {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .chat-messages {
+      padding: 10px;
+      height: 200px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .chat-input button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .chat-input button:hover {
+      background: #45a049;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      font-size: 30px;
+      color: #4CAF50;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌟 Lapse2L 🐱</h1>
+    <nav>
+      <a href="https://www.youtube.com/@Lapse2l" target="_blank">YouTube 📺</a>
+      <a href="https://www.instagram.com/lapse2l21/" target="_blank">Instagram 📸</a>
+      <a href="https://www.snapchat.com/add/lapse2l" target="_blank">Snapchat 👻</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Welcome to Lapse2L 🚀</h2>
+    <p>Your go-to platform for innovative solutions and engaging content. Join us on our journey!</p>
+  </div>
+
+  <div class="logo">
+    <img src="./Orange and Black Modern Basketball Logo.png" alt="Lapse2L Logo">
+  </div>
+
+  <section class="features">
+    <div class="feature">
+      <h3>🎥 Creative Content</h3>
+      <p>Discover unique and engaging content across all our platforms.</p>
+    </div>
+    <div class="feature">
+      <h3>🌍 Community Engagement</h3>
+      <p>Join our vibrant community and share your ideas.</p>
+    </div>
+    <div class="feature">
+      <h3>💡 Innovative Solutions</h3>
+      <p>Explore our cutting-edge tools and services tailored for you.</p>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <p>"The best way to predict the future is to create it."</p>
+    <span>- Peter Drucker</span>
+  </section>
+
+  <div class="social-icons">
+    <a href="https://www.youtube.com/@Lapse2l" target="_blank">📺</a>
+    <a href="https://www.instagram.com/lapse2l21/" target="_blank">📸</a>
+    <a href="https://www.snapchat.com/add/lapse2l" target="_blank">👻</a>
+  </div>
+
+  <footer>
+    <p>© 2025 Lapse2L 🐱 - All Rights Reserved. <a href="#">Terms</a> | <a href="#">Privacy</a></p>
+  </footer>
+
+  <div class="bot-container" onclick="toggleChat()">
+    <img src="./Red White Neon Circle Instagram Profile Picture (1).png" alt="Chatbot" width="100">
+  </div>
+
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">Chat with Lapse2L 🐱</div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatBox = document.getElementById('chatBox');
+      chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'flex' : 'none';
+    }
+
+    function sendMessage() {
+      const chatInput = document.getElementById('chatInput');
+      const chatMessages = document.getElementById('chatMessages');
+      const userMessage = chatInput.value.trim();
+
+      if (userMessage) {
+        const userMessageElement = document.createElement('div');
+        userMessageElement.textContent = `You: ${userMessage}`;
+        chatMessages.appendChild(userMessageElement);
+
+      }
+    }
+</script>
